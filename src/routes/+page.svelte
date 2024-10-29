@@ -1,5 +1,4 @@
 <h1>Welcome to SvelteKit</h1>
-<div class="container">
   <h2>
     This is a h2
   </h2>
@@ -27,4 +26,3 @@
   <button class="secondary">
     Click me
   </button>
-</div>
