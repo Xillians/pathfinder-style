@@ -1,3 +1,7 @@
+@import url(
+  "https://fonts.googleapis.com/css?family=Eczar:800|Roboto+Condensed|Tauri|Teko:500|Changa+One|Gelasio|DM+Serif+Text:400i&display=swap"
+);
+
 :root {
   --background-color: #f4f0e8;
   --title-color: #560c06;
@@ -20,10 +24,68 @@ body {
   color: var(--text-color);
   background-color: var(--background-color);
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center; /* Center the container vertically */
+  align-items: center; /* Center the container horizontally */
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 hr {
   border: 1px solid var(--separator-color);
+  margin: 0;
+}
+h1 {
+  margin: 0;
+  font-size: 48px;
+  color: var(--title-color);
+  font-family: 'title';
+  text-shadow: -2px -2px 0 #d6c58c, 2px -2px 0 #d6c58c, -2px 2px 0 #d6c58c, 2px 2px 0 #d6c58c;
+}
+
+h2 {
+  margin: 0;
+  font-size: 36px;
+  color: #d6c58c; /* Assuming brand.h2Color */
+  font-family: 'Eczar';
+}
+
+h3 {
+  margin: 0;
+  font-size: 32px;
+  color: #d6c58c; /* Assuming brand.textColor */
+  font-family: 'Teko';
+}
+
+h4 {
+  margin: 0;
+  font-size: 24px;
+  color: #d6c58c; /* Assuming brand.h4Color */
+  font-family: 'Tauri';
+}
+
+p, b {
+  color: var(--text-color);
+  font-family: 'Tauri';
+  font-size: 16px;
+  line-height: 1.5; /* Assuming base line-height */
   margin: 0;
 }
 
@@ -42,8 +104,8 @@ button.primary {
   margin: 10px 0;
   font-weight: 200;
   &:hover {
-    background-color: var(--primary-color);
-    color: var(--text-color-light);
+    background-color: var(--text-color-light);
+    color: var(--text-color);
     border: 2px solid var(--secondary-background);
   }
   &:focus {
@@ -68,16 +130,17 @@ button.secondary {
   margin: 10px 0;
   font-weight: 200;
   &:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--text-color-light);
     color: var(--text-color);
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--secondary-background);
   }
   &:focus {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--secondary-background);
+    color: var(--text-color-light);
     border: 2px solid var(--primary-color);
   }
 }
+
 button.dropdown {
   display: flex;
   align-items: center;
@@ -97,7 +160,7 @@ button.dropdown {
     background-color: var(--text-color);
     color: var(--text-color-light);
     border: 2px solid var(--primary-color);
-  }
+  } 
   &:focus {
     background-color: var(--text-color);
     color: var(--text-color-light);
@@ -115,56 +178,34 @@ input {
   border: 1px solid var(--text-color);
   border-radius: 8px;
   padding: 10px 20px;
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--text-color-light);
+  }
+  &:focus {
+    background-color: var(--text-color);
+    color: var(--text-color-light);
+  }
+  &.borderless {
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding: 10px 0;
+    &:hover {
+      border-color: var(--text-color-light);
+    }
+    &:focus {
+      border-color: var(--text-color-light);
+    }
+  }
 }
 
-input:hover {
-  background-color: var(--text-color);
-  color: var(--text-color-light);
-}
-
-input:focus {
-  background-color: var(--text-color);
-  color: var(--text-color-light);
-}
-
-input.borderless {
-  border: none;
-  border-bottom: 1px solid var(--text-color);
-  padding: 10px 0;
-}
-
-input.borderless:hover {
-  border-color: var(--text-color-light);
-}
-
-input.borderless:focus {
-  border-color: var(--text-color-light);
-}
-
-.tag {
-  font-family: Tauri;
-  background: none;
-  font-size: 28px;
-  font-weight: 600;
-  border-radius: 4px;
-  padding: 4px 8px;
-  background-color: var(--secondary-color);
-  color: var(--text-color-light);
-}
-
-.text {
-  color: var(--text-color);
-  font-family: Tauri;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
+.hidden {
+  display: none;
 }
 
 select {
   background-color: var(--secondary-background);
 }
-
-@import url("https://fonts.googleapis.com/css?family=Eczar:800|Roboto+Condensed|Tauri|Teko:500|Changa+One|Gelasio|DM+Serif+Text:400i&display=swap");
 
 @font-face {
   font-family: "pathfinder-actions";
